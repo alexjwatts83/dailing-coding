@@ -1,4 +1,7 @@
 <p>
   Get product of all other elements
 </p>
-[<ng-container *ngFor="let number of example; last as isLast">{{ number }}<ng-container *ngIf="!isLast">,</ng-container></ng-container>]
+[<ng-container *ngFor="let number of example; last as isLast">{{ number }}<ng-container *ngIf="!isLast">,</ng-container></ng-container>] = 
+<ng-container *ngIf="product">
+  [<ng-container *ngFor="let number of product; last as isLast">{{ number }}<ng-container *ngIf="!isLast">,</ng-container></ng-container>]
+</ng-container>
