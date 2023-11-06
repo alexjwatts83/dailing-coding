@@ -12,8 +12,21 @@ export class ArraysComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.product = this.getProduct2(this.example);
+      this.product = this.getProductUsingDivision(this.example);
     }, 1000);
+  }
+
+  private getProductUsingDivision(arr: number[]): number[] {
+    var product = [];
+    var finalResult = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      finalResult *= arr[i];
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+      product.push(finalResult/arr[i]);
+    }
+    return product;
   }
 
   private getProduct2(arr: number[]): number[] {
